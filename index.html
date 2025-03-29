@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fred-Flash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="currency">💱 Currency</button>
+            <button class="tab-btn" data-tab="calculator">🧮 Calculator</button>
+        </div>
+
+        <!-- Currency Converter -->
+        <div id="currency" class="tab-content active">
+            <h2>Currency Converter</h2>
+            <div class="converter-form">
+                <input type="number" id="amount" placeholder="Amount" min="0">
+                <div class="currency-selectors">
+                    <select id="from-currency"></select>
+                    <span>→</span>
+                    <select id="to-currency"></select>
+                </div>
+                <button id="convert-btn">Convert</button>
+                <div id="currency-result" class="result-box"></div>
+            </div>
+        </div>
+
+        <!-- Calculator -->
+        <div id="calculator" class="tab-content">
+            <h2>Calculator</h2>
+            <input type="text" id="calc-display" disabled>
+            <div class="calc-buttons">
+                <button class="calc-btn operator">AC</button>
+                <button class="calc-btn operator">(</button>
+                <button class="calc-btn operator">)</button>
+                <button class="calc-btn operator">/</button>
+                
+                <button class="calc-btn">7</button>
+                <button class="calc-btn">8</button>
+                <button class="calc-btn">9</button>
+                <button class="calc-btn operator">*</button>
+                
+                <button class="calc-btn">4</button>
+                <button class="calc-btn">5</button>
+                <button class="calc-btn">6</button>
+                <button class="calc-btn operator">-</button>
+                
+                <button class="calc-btn">1</button>
+                <button class="calc-btn">2</button>
+                <button class="calc-btn">3</button>
+                <button class="calc-btn operator">+</button>
+                
+                <button class="calc-btn zero">0</button>
+                <button class="calc-btn">.</button>
+                <button class="calc-btn equals">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="currency.js"></script>
+    <script src="calculator.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
