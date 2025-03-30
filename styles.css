@@ -1,0 +1,200 @@
+/* Main Styles */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #e0f3e8;
+    padding: 20px;
+    margin: 0;
+}
+
+.app-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Tab Styles */
+.tabs {
+    display: flex;
+    background-color: #2ecc71;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #148536;
+    font-weight: 600;
+}
+
+/* Content Areas */
+.tab-content {
+    padding: 20px;
+    display: none;
+    box-sizing: border-box;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Currency Converter Styles */
+.converter-form input,
+.converter-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.converter-form input:focus,
+.converter-form select:focus {
+    border-color: #2ecc71;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+}
+
+.currency-selectors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+#convert-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #079f46;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#convert-btn:hover {
+    background-color: #08c255;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #2ecc71;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Calculator Styles */
+#calc-display {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-align: right;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 5px;
+}
+
+.calc-btn {
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #f1f1f1;
+    user-select: none;
+}
+
+/* Number buttons hover effect */
+.calc-btn:not(.operator):not(.equals):hover {
+    background-color: #e0e0e0;
+}
+
+/* Number buttons active state */
+.calc-btn:not(.operator):not(.equals):active {
+    background-color: #05b64f;
+    color: white;
+    transform: scale(0.95);
+}
+
+/* Operator buttons */
+.calc-btn.operator {
+    background-color: #09bd54;
+    color: white;
+}
+
+.calc-btn.operator:hover {
+    background-color: #07a347;
+}
+
+.calc-btn.operator:active {
+    background-color: #05a648;
+}
+
+/* Equals button */
+.calc-btn.equals {
+    background-color: #06b851;
+    color: white;
+    grid-column: span 2;
+}
+
+.calc-btn.equals:hover {
+    background-color: #059a43;
+}
+
+.calc-btn.equals:active {
+    background-color: #04853a;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+    
+    .app-container {
+        border-radius: 0;
+    }
+    
+    .tab-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .tab-content {
+        padding: 15px;
+    }
+    
+    .calc-btn {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
