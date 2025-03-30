@@ -73,7 +73,7 @@ convertBtn.addEventListener('click', async () => {
     const from = fromCurrency.value;
     const to = toCurrency.value;
     
-    if (isNaN(amount) {
+    if (isNaN(amount)) {
         resultDiv.textContent = "Please enter a valid amount";
         return;
     }
